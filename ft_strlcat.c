@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tferrari <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: tferrari <tferrari@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/02 19:37:12 by tferrari          #+#    #+#             */
-/*   Updated: 2016/11/02 19:37:22 by tferrari         ###   ########.fr       */
+/*   Updated: 2016/11/24 15:58:30 by tferrari         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,22 +14,19 @@
 
 size_t	ft_strlcat(char *dest, const char *src, size_t size)
 {
-	size_t			idest;
-	size_t			isrc;
-	size_t			resultat;
-	size_t			i;
+	size_t i;
+	size_t sd;
 
+	sd = 0;
 	i = 0;
-	idest = ft_strlen(dest);
-	isrc = ft_strlen((char *)src);
-	if (idest >= size - 1)
-		return (resultat = isrc + size);
-	while (((i + idest) < size - 1))
+	while (dest[sd] && sd < size)
+		sd++;
+	while (sd + i < size - 1 && src[i])
 	{
-		dest[idest + i] = (char)src[i];
+		dest[sd + i] = src[i];
 		i++;
 	}
-	dest[idest + i] = '\0';
-	resultat = isrc + idest;
-	return (resultat);
+	if (sd < size)
+		dest[sd + i] = '\0';
+	return (sd + ft_strlen(src));
 }

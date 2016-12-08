@@ -62,7 +62,7 @@ SRC =	ft_memset.c \
 		ft_reverse_nb.c \
 		ft_nbword.c \
 		ft_nbletter.c \
-		ft_fill.c
+		ft_fill.c \
 
 PT_O =	ft_memset.o \
 		ft_bzero.o \
@@ -126,7 +126,7 @@ PT_O =	ft_memset.o \
 		ft_reverse_nb.o \
 		ft_nbword.o \
 		ft_nbletter.o \
-		ft_fill.o
+		ft_fill.o \
 
 all: $(NAME)
 

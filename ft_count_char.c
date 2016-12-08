@@ -1,27 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_striteri.c                                      :+:      :+:    :+:   */
+/*   ft_count_char.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tferrari <tferrari@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/02 19:37:12 by tferrari          #+#    #+#             */
-/*   Updated: 2016/11/24 14:02:23 by tferrari         ###   ########.fr       */
+/*   Created: 2016/11/30 11:46:34 by tferrari          #+#    #+#             */
+/*   Updated: 2016/11/30 11:49:23 by tferrari         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_striteri(char *s, void (*f)(unsigned int, char *))
+int		ft_count_char(char *s, char c)
 {
 	int	i;
+	int	nb;
 
-	if (s == NULL || (f) == NULL)
-		return ;
 	i = 0;
+	nb = 0;
 	while (s[i])
 	{
-		f(i, &s[i]);
+		if (s[i] == c)
+			nb++;
 		i++;
 	}
+	return (nb);
 }
