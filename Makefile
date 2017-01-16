@@ -63,6 +63,10 @@ SRC =	ft_memset.c \
 		ft_nbword.c \
 		ft_nbletter.c \
 		ft_fill.c \
+		ft_putstrnbr.c \
+		ft_putnbrendl.c \
+		ft_realloc_chr.c \
+		ft_realloc_adr.c
 
 PT_O =	ft_memset.o \
 		ft_bzero.o \
@@ -127,6 +131,10 @@ PT_O =	ft_memset.o \
 		ft_nbword.o \
 		ft_nbletter.o \
 		ft_fill.o \
+		ft_putstrnbr.o \
+		ft_putnbrendl.o \
+		ft_realloc_chr.o \
+		ft_realloc_adr.o
 
 all: $(NAME)
 

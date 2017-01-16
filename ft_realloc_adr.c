@@ -1,40 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_realloc_adr.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tferrari <tferrari@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/02 19:37:12 by tferrari          #+#    #+#             */
-/*   Updated: 2017/01/11 18:10:28 by tferrari         ###   ########.fr       */
+/*   Created: 2017/01/16 18:39:27 by tferrari          #+#    #+#             */
+/*   Updated: 2017/01/16 18:50:37 by tferrari         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_atoi(const char *str)
+int		ft_realloc_adr(char **str, int size)
 {
-	int	resultat;
-	int	i;
-	int	signe;
+	char		*tmp;
 
-	resultat = 0;
-	i = 0;
-	signe = 1;
-	while (str[i] == ' ' || str[i] == '\t' || str[i] == '\n' || str[i] == '\r'
-	|| str[i] == '\v' || str[i] == '\f')
-		i++;
-	if (str[i] == '+')
-		i++;
-	else if (str[i] == '-')
-	{
-		i++;
-		signe = -1;
-	}
-	while (str[i] >= '0' && str[i] <= '9')
-	{
-		resultat = resultat * 10 + (str[i] - '0');
-		i++;
-	}
-	return (resultat * signe);
+	if (size < 0)
+		return (0);
+	if (size == 0)
+		return (0);
+	if (!(tmp = ft_strnew(ft_strlen(*str))))
+		return (0);
+	tmp = ft_strcpy(tmp, *str);
+	ft_memdel((void **)str);
+	if (!(*str = ft_strnew(ft_strlen(tmp) + size)))
+		return (0);
+	*str = ft_strcpy(*str, tmp);
+	ft_memdel((void **)&tmp);
+	tmp = NULL;
+	return (1);
 }
