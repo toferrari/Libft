@@ -1,28 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_strnccat.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tferrari <tferrari@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/02 19:37:12 by tferrari          #+#    #+#             */
-/*   Updated: 2016/11/22 20:46:18 by tferrari         ###   ########.fr       */
+/*   Created: 2017/02/09 19:11:13 by tferrari          #+#    #+#             */
+/*   Updated: 2017/02/09 20:22:49 by tferrari         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
-#include <unistd.h>
-#include <wchar.h>
-int	main(void)
+
+char	*ft_strnccat(char *dest, char c, int n)
 {
+	int	i;
+	int	j;
 
-
-
-
-	//printf("retour : %d\n", ft_printf("'%.3lS'\n", L"éζ\x112u\x4A65-\x10082"));
-	ft_putnbr(-2147483647);
-	//putnbr("01-11230010203-562147483647-2147483648");
-	return (0);
-
+	i = 0;
+	j = ft_strlen(dest);
+	while (i < n)
+	{
+		dest[j] = c;
+		i++;
+		j++;
+	}
+	dest[j] = '\0';
+	return (dest);
 }
