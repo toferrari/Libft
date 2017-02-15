@@ -77,7 +77,13 @@ SRC =	ft_memset.c \
 		ft_itoa_64.c \
 		ft_itoa_u64.c \
 		ft_itoa_u.c \
-		ft_intlen_u.c
+		ft_intlen_u.c \
+		ft_intlen_o.c \
+		ft_itoa_o.c \
+		ft_intlen_h.c \
+		ft_itoa_h.c \
+		ft_itoa_llh.c \
+		ft_intlen_llh.c
 
 PT_O =	ft_memset.o \
 		ft_bzero.o \
@@ -156,18 +162,25 @@ PT_O =	ft_memset.o \
 		ft_itoa_64.o \
 		ft_itoa_u64.o \
 		ft_itoa_u.o \
-		ft_intlen_u.o
+		ft_intlen_u.o \
+		ft_intlen_o.o \
+		ft_itoa_o.o \
+		ft_intlen_h.o \
+		ft_itoa_h.o \
+		ft_itoa_llh.o \
+		ft_intlen_llh.o
 
 all: $(NAME)
 
 $(NAME):
-	gcc -c -Wall -Werror -Wextra $(SRC) -Iinclude
-	ar rc $(NAME) $(PT_O)
+	@gcc -c -Wall -Werror -Wextra $(SRC) -Iinclude
+	@ar rc $(NAME) $(PT_O)
+	@echo "compiler"
 
 clean:
-	rm -f $(PT_O)
+	@rm -f $(PT_O)
 
 fclean: clean
-	rm -f $(NAME)
+	@rm -f $(NAME)
 
 re: fclean all
