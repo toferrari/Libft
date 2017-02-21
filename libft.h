@@ -6,7 +6,7 @@
 /*   By: tferrari <tferrari@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/02 19:37:12 by tferrari          #+#    #+#             */
-/*   Updated: 2017/02/16 18:20:20 by tferrari         ###   ########.fr       */
+/*   Updated: 2017/02/21 18:56:10 by tferrari         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -111,5 +111,8 @@ int				ft_intlen_llh(uint64_t n);
 char			*ft_itoa_llh(uint64_t n, uint64_t up);
 int				ft_intlen_llo(uint64_t n);
 char			*ft_itoa_llo(uint64_t n);
+char			*ft_strlnccat(char *dest, char c,int *start, int len);
+char			*ft_strcat_p(char *dest, const char *src, int len);
+int				ft_realloc_adr_p(char **str, int size, int len);
 
 #endif
