@@ -1,26 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_intlen_o.c                                      :+:      :+:    :+:   */
+/*   ft_intlen_base.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tferrari <tferrari@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/02 19:37:12 by tferrari          #+#    #+#             */
-/*   Updated: 2017/02/13 15:29:08 by tferrari         ###   ########.fr       */
+/*   Updated: 2017/02/22 14:34:31 by tferrari         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_intlen_o(unsigned int n)
+int		ft_intlen_base(unsigned int n, int base)
 {
 	int		len;
 
 	len = 1;
-	while (n > 7)
+	while (n > 9)
 	{
 		len++;
-		n = n / 8;
+		n = n / base;
 	}
 	return (len);
 }
