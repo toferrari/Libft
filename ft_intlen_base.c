@@ -6,7 +6,7 @@
 /*   By: tferrari <tferrari@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/02 19:37:12 by tferrari          #+#    #+#             */
-/*   Updated: 2017/02/22 14:34:31 by tferrari         ###   ########.fr       */
+/*   Updated: 2017/02/22 18:30:28 by tferrari         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int		ft_intlen_base(unsigned int n, int base)
 	int		len;
 
 	len = 1;
-	while (n > 9)
+	while (n > (unsigned int)base - 1)
 	{
 		len++;
 		n = n / base;

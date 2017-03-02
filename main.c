@@ -1,8 +1,10 @@
 #include <stdio.h>
 #include "libft.h"
+#include <wchar.h>
+
 int main()
 {
-	printf("%lo\n", 651566654645455);
-	printf("%s\n", ft_itoa_base64(651566654645455, 8));
-	printf("%c", 47);
+wchar_t b = L'୴';
+	printf("%d\n", ft_wchar_len(b));
+//	printf("%s\n", ft_itoa_base64(4294967296, 16));
 }
