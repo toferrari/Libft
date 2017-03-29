@@ -6,7 +6,7 @@
 #    By: tferrari <tferrari@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/03/12 18:19:54 by tferrari          #+#    #+#              #
-#    Updated: 2017/03/12 19:24:29 by tferrari         ###   ########.fr        #
+#    Updated: 2017/03/29 16:05:22 by tferrari         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -35,7 +35,14 @@ SRC_FILE =	ft_memset.c ft_bzero.c ft_memcpy.c ft_memccpy.c ft_memmove.c \
 			ft_strcat_p.c ft_realloc_adr_p.c ft_intlen_base.c ft_itoa_base.c \
 			ft_intlen_base64.c ft_itoa_base64.c ft_strupper.c ft_wchar_len.c \
 			ft_wchrcat.c ft_strccat_p.c ft_strcpy_p.c ft_wstr_len.c \
-			ft_intmal.c get_next_line.c
+			ft_intmal.c get_next_line.c ft_swap.c \
+			ft_call_arg.c ft_convert_signe.c ft_wchar_to_char.c ft_flag.c \
+			ft_flag_d.c ft_flag_hhu.c ft_flag_hho.c ft_flag_hhx.c ft_flag_hd.c \
+			ft_flag_ho.c ft_flag_hexa.c ft_flag_lld.c ft_flag_llu.c \
+			ft_flag_octal.c ft_flag_pourcent.c ft_flag_str.c ft_flag_u.c \
+			ft_parse_flag.c ft_flag_llhexa.c ft_flag_c_null.c ft_flag_chr.c \
+			ft_flag_wchr.c ft_flag_wstr.c ft_flag_hhd.c ft_flag_llo.c \
+			ft_flag_p.c ft_printf.c ft_flag_b.c
 
 SRC = $(addprefix $(SRC_DIR)/, $(SRC_FILE))
 
