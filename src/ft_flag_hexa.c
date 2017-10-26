@@ -6,7 +6,7 @@
 /*   By: tferrari <tferrari@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/13 18:40:56 by tferrari          #+#    #+#             */
-/*   Updated: 2017/03/24 17:47:39 by tferrari         ###   ########.fr       */
+/*   Updated: 2017/10/26 15:35:49 by tferrari         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ static void	ft_moin_off(char **str, t_print ptf, unsigned int nb, int *len_i)
 		*str = (ptf.c == 'X') ? ft_strcat(*str, "0X") : ft_strcat(*str, "0x");
 	if (ptf.htag == 1 && ptf.bool_acc == 1 && len_i[0] < ptf.accuracy)
 		*str = ft_strnccat(*str, '0', ptf.accuracy - len);
-	else if (ptf.accuracy > 0 && nb != 0)
+	else if (ptf.accuracy > 0)
 		*str = ft_strnccat(*str, '0', ptf.accuracy - len - len_i[1]);
 	if (!(nb == 0 && ptf.bool_acc == 1 && ptf.accuracy == 0))
 		*str = (ptf.c == 'X') ? ft_strcat(*str, ft_strupper(

@@ -6,7 +6,7 @@
 /*   By: tferrari <tferrari@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/13 14:09:46 by tferrari          #+#    #+#             */
-/*   Updated: 2017/03/28 20:53:00 by tferrari         ###   ########.fr       */
+/*   Updated: 2017/10/26 15:36:20 by tferrari         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ static void	ft_moin_off(char **str, t_print ptf, unsigned int nb, int i)
 		*str = ft_strnccat(*str, ' ', ptf.zero - len - i);
 	else
 		*str = ft_strnccat(*str, ' ', ptf.zero - ptf.accuracy - i);
-	if (ptf.accuracy > 0 && nb != 0)
+	if (ptf.accuracy > 0)
 		*str = ft_strnccat(*str, '0', ptf.accuracy - len);
 	if (ptf.accuracy == 0 && i == 1 && nb != 0)
 		*str = ft_strcat(*str, "0");
